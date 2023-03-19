@@ -1,0 +1,12 @@
+
+
+Write a Python program that accepts a word from the user and reverse it.
+
+Program- 
+
+word = input("Input an word to Reverse") # Edyoda
+
+for char in range(len(word) -1, -1, -1):
+    print(word[char], end="")
+    
+    Output- adoydE
