@@ -1,0 +1,30 @@
+Calculate the Upper and The lower Case
+
+Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters.
+
+
+
+Sample String : 'The quick Brow Fox'
+
+Code-
+
+def string_test(str):
+    d={"UPPER_CASE":0, "LOWER_CASE":0}
+    for c in str:
+        if c.isupper():
+            d["UPPER_CASE"]+=1
+        elif c.islower():
+            d["LOWER_CASE"]+=1
+        else:
+            pass
+    print("Original String :", str)
+    print("No. of Upper Case Characters :", d["UPPER_CASE"])
+    print("No. of Lpper Case Characters :", d["LOWER_CASE"])
+    
+string_test('The quick Brow Fox')
+
+Output-
+
+Original String : The quick Brow Fox
+No. of Upper Case Characters : 3
+No. of Lpper Case Characters : 12
