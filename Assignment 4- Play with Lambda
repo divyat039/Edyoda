@@ -1,0 +1,7 @@
+Write a Python program to create a lambda function that adds 25 to a given number passed in as an argument.
+
+r = lambda a: a + 25
+r = lambda a,b:a+b
+print(r(10,25))
+
+Output- 35
