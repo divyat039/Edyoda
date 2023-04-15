@@ -1,0 +1,43 @@
+Challenge 2: Implement a Calculator Class
+
+Input-
+
+class calculator:
+    def __init__(self,num1,num2):
+        self.num1=num1
+        self.num2=num2
+    def add(self):
+        return self.num1+self.num2
+    def substract(self):
+        return self.num1-self.num2
+    def multiply(self):
+        return self.num1*self.num2
+    def divide(self):
+        return self.num1/self.num2
+
+obj=calculator(94,10)
+choice=1
+while choice!=0:
+    choice=int(input("Enter choice: "))
+    if choice ==1:
+        print(obj.add())
+    elif choice ==2:
+        print(obj.substract())
+    elif choice==3:
+        print(obj.multiply())
+    elif choice==4:
+        print(round(obj.divide(),2))
+    else:
+        print("Exit")
+        
+        Output-
+Enter choice: 1
+104
+Enter choice: 2
+84
+Enter choice: 3
+940
+Enter choice: 4
+9.4
+Enter choice: 0
+Exit
