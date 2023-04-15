@@ -1,0 +1,30 @@
+Challenge 3: Implement the Complete Student Class
+
+Input
+
+class Student:
+    def __init__(self, Name, RollNumber):
+        self.name = Name
+        self.rollnumber = RollNumber
+
+    def setname(self,Name):
+        self.name = Name
+
+    def getname(self):
+        return self.name
+
+    def setRollNumber(self,RollNumber):
+        self.rollnumber = RollNumber
+
+    def getRollNumber(self):
+        return self.rollnumber
+student1 = Student("John Doe", 5678)
+student1.setname("Jane Smith")
+student1.setRollNumber(8765)
+print(student1.getname())         
+print(student1.getRollNumber())    
+
+Output
+
+Jane Smith
+8765
