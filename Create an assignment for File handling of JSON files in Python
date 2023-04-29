@@ -1,0 +1,91 @@
+Input- Creating a JSON file of employee information and reading it into a list of objects:
+
+import json
+
+class Employee:
+    def __init__(self, name, dob, height, city, state):
+        self.name = name
+        self.dob = dob
+        self.height = height
+        self.city = city
+        self.state = state
+
+# Creating a JSON file with employee information
+employees = [
+    {
+        "name": "John Doe",
+        "dob": "1995-05-15",
+        "height": 175,
+        "city": "New York",
+        "state": "NY"
+    },
+    {
+        "name": "Jane Smith",
+        "dob": "1990-10-10",
+        "height": 163,
+        "city": "Los Angeles",
+        "state": "CA"
+    },
+    {
+        "name": "Bob Johnson",
+        "dob": "1985-03-25",
+        "height": 180,
+        "city": "Chicago",
+        "state": "IL"
+    },
+    {
+        "name": "Mary Davis",
+        "dob": "1992-12-01",
+        "height": 167,
+        "city": "Houston",
+        "state": "TX"
+    },
+    {
+        "name": "David Lee",
+        "dob": "1988-06-20",
+        "height": 172,
+        "city": "San Francisco",
+        "state": "CA"
+    }
+]
+
+with open("employee.json", "w") as f:
+    json.dump(employees, f)
+
+# Reading the JSON file into a list of Employee objects
+employee_objects = []
+with open("employee.json", "r") as f:
+    employee_data = json.load(f)
+    for employee in employee_data:
+        employee_objects.append(Employee(employee["name"], employee["dob"], employee["height"], employee["city"], employee["state"]))
+
+# Printing the list of Employee objects
+for employee in employee_objects:
+    print("Name: {}, DOB: {}, Height: {}, City: {}, State: {}".format(employee.name, employee.dob, employee.height, employee.city, employee.state))
+
+2. Creating a JSON file of Indian states and their capitals:
+
+import json
+
+# Creating a dictionary of Indian states and their capitals
+indian_states = {
+    "Andhra Pradesh": "Hyderabad",
+    "Arunachal Pradesh": "Itanagar",
+    "Assam": "Dispur",
+    "Bihar": "Patna",
+    "Gujarat": "Gandhinagar",
+    "Maharashtra": "Mumbai",
+    "Tamil Nadu": "Chennai"
+}
+
+# Writing the dictionary into a JSON file
+with open("indian_states.json", "w") as f:
+    json.dump(indian_states, f)
+
+# Reading the JSON file into a dictionary
+with open("indian_states.json", "r") as f:
+    indian_states = json.load(f)
+
+# Printing the dictionary
+for state, capital in indian_states.items():
+    print("{}: {}".format(state, capital))
