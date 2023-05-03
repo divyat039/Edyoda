@@ -1,0 +1,20 @@
+Write a program to reverse an array in place?
+
+Input 
+
+def reverselist(A, start, end):
+    while start < end:
+        A[start], A[end] = A[end], A[start]
+        start +=1
+        end -=1
+A =[1,2,3,4,5,6]
+print(A)
+reverselist(A,0,5)
+print(" Reveresed list is")
+print(A)
+
+Output
+
+[1, 2, 3, 4, 5, 6]
+ Reveresed list is
+[6, 5, 4, 3, 2, 1]
