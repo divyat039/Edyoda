@@ -1,0 +1,22 @@
+Write a program to find all pairs of an integer array whose sum is equal to a given number?
+
+Input-
+
+def find_pairs(arr, len, sum):
+    print("pairs whose sum is :",sum)
+    for i in range(len):
+        for j in range(i, len):
+            if (arr[i] + arr[j]) == sum:
+                print(arr[i],arr[j])
+arr = [5,2,3,4,1,6,7]
+sum=7
+print("arr=",arr)
+find_pairs(arr,len(arr),sum)
+
+Output
+
+arr= [5, 2, 3, 4, 1, 6, 7]
+pairs whose sum is : 7
+5 2
+3 4
+1 6
