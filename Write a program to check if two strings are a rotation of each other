@@ -1,0 +1,28 @@
+Write a program to check if two strings are a rotation of each other?
+
+Input-
+
+def is_rotation(str1, str2):
+    size1 = len(str1)
+    size2 = len(str2)
+    temp =''
+    if size1 != size2:
+        return 0
+    temp = str1 + str1
+    if (temp.count(str2) > 0):
+        return 1
+    else:
+        return 0
+        
+if __name__ == "__main__":
+    str1 = "AACD"
+    str2 = "ACDA"
+    if is_rotation(str1,str2):
+        print("strings are rotations of each other")
+    else:
+        print("strings are not rotations of each other")
+
+
+Output
+
+strings are rotations of each other
